@@ -1,0 +1,366 @@
+/* =================================================*/
+/* Team BLEU =======================================*/
+/* =================================================*/
+
+/* =================================================*/
+/* GLOBAL == DERNIERE MODIF 22/06 11:00 ============*/
+/* =================================================*/
+
+/* VARIABLES ========== */
+:root {
+	box-sizing: border-box;
+	margin: 0;
+	border: 0;
+	/* Conventional DEV Syntax lowcase and capitalize next Word Like jeSuisUneVariable */
+
+	/* COLORS ============= */
+	--colorYellow: #eef13f;
+	--colorOrange: hsl(13, 99%, 60%);
+	--colorGreen: #80b238;
+	--colorBlue: #80c1d6;
+	--colorWhite: white;
+	/* FONTS ===================*/
+	font: 100% "Atma";
+}
+/* @media */
+
+/* BODY =====================  EVERYTHING ISALRIGHT??? 
+*/
+body {
+	box-sizing: border-box;
+	margin: 0;
+	border: 0;
+	background: var(--colorBlue);
+}
+
+/* BODY =====================  */
+
+/* Bordure translucide des blocs de page */
+main:first-of-type section:first-of-type,
+footer {
+	border-top: 8px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 8px solid rgba(0, 0, 0, 0.1);
+}
+
+/* LES TITRES ========================= */
+h1,
+h3,
+blockquote {
+	font-family: "Bangers";
+}
+
+h1 {
+	text-align: center;
+	font-size: 4em;
+	text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+	color: var(--colorWhite);
+	margin: 0;
+	padding: 2rem;
+}
+h2 {
+	margin: 0;
+	text-align: center;
+}
+.card a {
+	text-decoration: none;
+	color: inherit;
+}
+footer h1,
+footer h2 {
+	color: black;
+}
+
+/* <hr /> est une balise sépareur de html 1.0 . Permet de générer le damier avec une image SVG /*
+*/
+hr {
+	height: 48px;
+	max-width: 60rem;
+	/* min-width: 15rem; <-- A quoi sert cette ligne */
+	/* Par défaut l'élement à une bordure */
+	border: none;
+	/* mettre center pour un effet responsive sur le centre, meilleur rendu */
+	background: center repeat-x url("/img/hr.svg");
+}
+
+/* @MEDIA ===================*/
+@media (min-width: 35rem) {
+	/*SUR FIREFOX QUAND AFFICHAGE ETROIT FOOTER SUR UNE SEULE COLONE ALIGNÉE À GAUCHE*/
+	/*.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }*/
+	.gauche {
+		text-align: right;
+	}
+	.network,
+	.studios,
+	.bu {
+		grid-column: 1 / span 2;
+	}
+	/*.studios {
+    grid-column: 1 / span 2;
+  }
+  .bu{
+    grid-column: 1 / span 2;
+  }*/
+}
+/*@media (min-width: 46.25em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }*/
+@media (min-width: 45rem) {
+	.pad {
+		grid-template-columns: repeat(3, 1fr); /*ca a pas l'air utile*/
+	}
+}
+/* Nav ================= Teresa */
+.navbar {
+	font-family: Atma;
+	font-size: 1rem;
+	background: rgba(133, 185, 93, 0.8);
+	position: fixed;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	height: 60px;
+}
+
+header ul {
+	list-style: none;
+	margin: 0;
+	padding: 20px;
+	display: flex;
+	justify-content: space-around;
+}
+
+header a {
+	color: white;
+	text-decoration: none;
+	display: block;
+	transition: 1s;
+	padding: 0 16px;
+}
+
+header a:hover {
+	transform: rotate(5deg) scale(1.8);
+}
+
+header li:hover:nth-child(even) a {
+	transform: rotate(-5deg) scale(1.8);
+}
+
+header li:last-child a {
+	font-weight: bold;
+}
+section {
+	color: white;
+	font-family: "Atma";
+	font-size: 100%;
+	background: var(--colorOrange);
+	padding-top: 5rem;
+	padding-bottom: 15rem;
+}
+
+.pad {
+	width: 100%;
+	max-width: 60rem;
+	margin: 0 auto;
+	padding: 1.5rem 1.5rem;
+	display: grid;
+	gap: 1.75rem 1.5rem;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card {
+	color: white;
+	border-radius: 16px;
+	background: var(--colorGreen);
+	margin: 0;
+	transition: 0.5s;
+	padding: 1rem 1rem;
+}
+
+.card:hover {
+	background-color: var(--colorYellow);
+	color: var(--colorOrange);
+}
+
+/* =================================================*/
+/* APPLY ===========================================*/
+/* =================================================*/
+#applyform {
+	margin: auto;
+	max-width: 60rem;
+	width: calc(100%-80px);
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem 1.5rem;
+}
+form div {
+	display: grid;
+}
+
+.compuls::after {
+	/* mettre un * pour marquer le caractère obligatoire du champ de formulaire*/
+	content: "*";
+}
+
+input[type="text"],
+input[type="email"] {
+	width: 100%;
+	height: 40px;
+	font-family: "Atma";
+	font-size: 1.3em;
+	border-radius: 5px;
+	border: none;
+	color: var(--colorWhite);
+	background: var(--colorOrange);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+	width: 100%;
+	height: 40px;
+	font: "Atma" 1.5em bold;
+	border-radius: 5px;
+	border: none;
+	color: var(--colorOrange);
+	background: var(--colorYellow);
+}
+
+input[type="text"]::placeholder,
+input[type="mail"]::placeholder {
+	color: var(--colorWhite);
+}
+
+input[type="text"]::placeholder:focus,
+input[type="mail"]::placeholder:focus {
+	color: var(--colorOrange);
+}
+
+placeholder {
+	font: "Atma" 1.3em bold;
+}
+
+label {
+	display: block;
+	font-family: "Atma";
+	font-size: 1.3em;
+	color: var(--colorWhite);
+}
+
+button {
+	font: 2em var(--colorWhite);
+	color: var(--colorWhite);
+	text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+	font-family: "bangers";
+	background: center no-repeat url("/img/submit_bg.svg");
+	background-size: 70%;
+	border: none;
+	width: 20rem;
+	height: 20rem;
+	transform: rotate(-5deg);
+	transition: 0.6s;
+}
+
+button:hover {
+	font: 2em var(--colorWhite);
+	color: var(--colorWhite);
+	text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+	font-family: "bangers";
+	background: center center no-repeat url("/img/submit_bg.svg");
+	background-size: 70%;
+	border: none;
+	width: 20rem;
+	height: 20rem;
+	transform: rotate(0deg) scale(1.5);
+	transition: 0, 6s;
+}
+
+/* =================================================*/
+/* PRIZES ==========================================*/
+/* =================================================*/
+
+/* mettre ici le code spécifique à la page */
+
+/* FOOTER ==================Cyril  */
+
+/* LA POSITION KN */
+.kn {
+	position: absolute;
+	top: -79px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+footer img {
+	width: 150px;
+	height: 150px;
+}
+footer {
+	background: var(--colorYellow);
+	position: relative;
+	padding: 50px;
+}
+.footergrid {
+	max-width: 60rem;
+	display: grid;
+	margin: 0 auto;
+	gap: 1.5rem;
+}
+
+/*Home css -Teresa*/
+.bannertext {
+	text-align: center;
+	color: hsl(13, 99%, 60%);
+	text-shadow: 0.125rem 0.125rem white;
+	letter-spacing: 0.125rem;
+	font-size: calc(16px + (86 - 16) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.greensplash {
+	width: auto;
+	height: 31.88rem;
+	margin-top: 6rem;
+}
+
+.foreground {
+	background-image: url("img/blue-splash.png");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	display: flex;
+	background-size: cover;
+	flex-direction: column;
+	background-position: center center;
+}
+/* damier */
+/*
+table { 
+  
+  margin: 100px 250px;
+  border-spacing:0;
+  border: 1px solid ;
+  color:white;
+}
+
+td {max-width:100%;
+  width: 4vmin;
+  height: 4vmin;}
+
+tr:nth-of-type(2n) td:nth-of-type(n + 1) {
+  background: var(--colorYellow);
+}
+tr:nth-of-type(2n) td:nth-of-type(2n + 1) {
+  background: transparent;
+}
+tr:nth-of-type(2n + 1) td:nth-of-type(n + 1) {
+  background: transparent;
+}
+tr:nth-of-type(2n + 1) td:nth-of-type(2n + 1) {
+  background: var(--colorYellow);
+}*/

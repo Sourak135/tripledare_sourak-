@@ -1,0 +1,324 @@
+/* =================================================*/
+/* Team BLEU =======================================*/
+/* =================================================*/
+
+/* =================================================*/
+/* GLOBAL == DERNIERE MODIF 18/06 17:45 ============*/
+/* =================================================*/
+
+/* VARIABLES ========== */
+:root {
+  /* Conventional DEV Syntax lowcase and capitalize next Word Like jeSuisUneVariable */
+box-sizing: border-box;
+  /* COLORS ============= */
+  --colorYellow: #eef13f;
+  --colorOrange: hsl(13, 99%, 60%);
+  --colorGreen: #80b238;
+  --colorBlue: #80c1d6;
+  --colorWhite: white;
+
+  /* FONTS ===================*/
+  font: 100% "Atma";
+}
+  /* @MEDIA ===================*/
+@media (max-width:1280px){
+
+}
+
+@media (max-width:600px){
+
+}
+
+@media (max-width:360px){
+
+}
+
+/* BODY =====================  */
+.bodytest {
+  /* A retirer à la fin */
+  background-color: var(--colorBlue);
+}
+/* bande translucide*/
+main:first-of-type section:first-of-type {
+  border-top: 8px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 8px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+/* H1 ================= */
+h1,
+h2,
+h3 {
+  font-family: "Bangers";
+}
+
+h1 {
+  text-align: center;
+  font-size: 4em;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  color: var(--colorWhite);
+}
+
+#splash {
+display: flex;
+flex-flow: center;
+
+}
+
+#splash img{
+max-width: 600px;
+height: auto;
+
+}
+
+.boom{
+  font-size:6em;
+  color: var(--colorOrange);
+  font-family:"Bangers";
+}
+
+/*
+<hr /> est une balise sépareur de html 1.0
+Elle Permet de générer le damier avec une image SVG
+*/
+hr {
+  height: 48px;
+  max-width: 66rem;
+  /* Par défaut l'élement à une bordure */
+  border: none;
+  /* mettre center pour un effet responsive sur le centre, meilleur rendu */
+  background: center repeat-x url("/img/hr.svg");
+}
+
+/* @MEDIA ===================*/
+
+/* NAV ====================== */
+header {
+  background: center no-repeat url(/img/splash.svg) 100%;
+  background-color:#80c1d6;
+}
+nav {
+  font-family: Atma;
+  font-size: 1rem;
+  background: rgba(133, 185, 93, 0.8);
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  height: 60px;
+}
+
+header ul {
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: center center;
+  /*margin: 0;*/
+  padding: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
+
+ 
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  overflow: hidden;
+  transition: 1s;
+}
+
+header a:hover {
+  transform: rotate(5deg) scale(1.8);
+}
+
+li:hover:nth-child(even) a {
+  transform: rotate(-5deg) scale(1.8);
+}
+
+li:last-child a {
+  font-weight: bold;
+}
+
+
+2rem);
+  max-width: 60rem;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+.card {
+  border-radius: 16px;
+  background: var(--colorGreen);
+  margin: 1rem 2rem;
+  transition: 0.5s;
+}
+
+h2 {
+  text-align: center;
+}
+.card:hover {
+  background-color: var(--colorYellow);
+  color: var(--colorOrange);
+}
+footer h1,
+footer h2 {
+  color: black;
+}
+@media (min-width: 35em) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .gauche {
+    text-align: right;
+  }
+  .network {
+    grid-column: 1 / span 2;
+  }
+  .studios {
+    grid-column: 1 / span 2;
+  }
+}
+@media (min-width: 46.25em) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =================================================*/
+/* INDEX ===========================================*/
+/* =================================================*/
+
+/* mettre ici le code spécifique à la page */
+
+/* =================================================*/
+/* APPLY  NEPH 18/06 MODIF : 11h33 =================*/
+/* =================================================*/
+
+/* mettre ici le code spécifique à la page */
+
+form {
+display: grid;
+grid: grid-template-columns: 1fr 1fr;
+
+}
+#applyform {
+  display: grid;
+  background-color: green;
+  background-color: var(--colorBlue);
+}
+
+.compuls::after {
+  /* mettre un * pour marquer le caractère obligatoire du champ de formulaire*/
+  content: "*";
+}
+
+input[type="text"], input[type="email"] {
+  width: 50%;
+  height: 40px;
+  font: "Atma" 1.5em bold;
+  border-radius: 5px;
+  border: none;
+  background: var(--colorOrange);
+}
+
+input[type="text"]:focus {
+  width: 50%;
+  height: 40px;
+  font: "Atma" 1.5em bold;
+  border-radius: 5px;
+  border: none;
+  background: var(--colorYellow);
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255);
+  font: "Atma" 1.5em bold;
+}
+
+placeholder {
+  font: "Atma" 1.5em bold;
+}
+
+label {
+  font: "Atma" 1.5em bold;
+  color: var(--colorWhite);
+}
+
+button {
+  font: 2em var(--colorWhite);
+  color: var(--colorWhite);
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  font-family: "bangers";
+  background: center no-repeat url("/img/submit_bg.png");
+  border: none;
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(-5deg);
+  transition: 0.6s;
+}
+
+button:hover {
+  font: 2em var(--colorWhite);
+  color: var(--colorWhite);
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+  font-family: "bangers";
+  background: center center no-repeat url("/img/submit_bg.png");
+  border: none;
+  width: 20rem;
+  height: 20rem;
+  transform: rotate(0deg) scale(1.5);
+  transition: 0, 6s;
+}
+
+/* =================================================*/
+/* PRIZES ==========================================*/
+/* =================================================*/
+
+/* mettre ici le code spécifique à la page */
+
+/* FOOTER ==================Cyril  */
+footer {
+  background: var(--colorYellow);
+  position: relative;
+  padding: 50px;
+  margin: 0 auto;
+
+  /*la bande translucide en haut et en bas des main et footer je n'y arrive pas avec ridge*/
+  border-top: 8px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 8px solid rgba(0, 0, 0, 0.1);
+}
+/* LE KN */
+.kn {
+  position: absolute;
+  top: -79px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+/* TAILLE KN*/
+footer img {
+  width: 150px;
+  height: 150px;
+}
+
+/* pensez à mettre des spec de zone >>> footer h3 <<<< sinon ca s'applique partout */
+footer h2,
+footer h3 {
+  text-align: center; /*sans doute a virer quand titres gérés*/
+}
+.footergrid {
+  max-width: 60rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 0 auto;
+}
